@@ -50,6 +50,7 @@ INSTALLED_APPS = [
 
     # USER DEFINED APP
     'geolocation',
+    'users'
 ]
 
 MIDDLEWARE = [
@@ -143,3 +144,9 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static_cdn')
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+LOGIN_URL = "users:sign-in"
+LOGIN_REDIRECT_URL = "users:account"
+LOGOUT_REDIRECT_URL = "users:sign-in"
+
+BASE_COUNTRY = "IN"

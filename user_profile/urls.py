@@ -24,10 +24,15 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('geolocation.urls', namespace='geolocation')),
+    path('', include('geolocation.urls')),
+    path('', include('users.urls')),
 ]
 
 
 
 # if django.settings:
 #     urlpatterns += static(settings.)
+
+if settings.DEBUG:
+    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+
