@@ -19,7 +19,15 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 
+
+# app_name = 'geolocation'
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('geolocation.urls', namespace='geolocation')),
 ]
+
+
+
+# if django.settings:
+#     urlpatterns += static(settings.)

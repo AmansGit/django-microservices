@@ -13,6 +13,15 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 from pathlib import Path
 import os
 
+# from configparser import ConfigParser
+# configur = ConfigParser()
+
+# print("Credentialsss:::: ", configur.read('credentials.config'))
+# print("Value:: ", configur.get('GOOGLE', 'GOOGLE_API_KEY'))
+
+
+# print("CREDENTIALS:: ", GOOGLE_API_KEY)
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -128,14 +137,6 @@ STATICFILES_DIRS = [
 STATIC_URL = '/static/'
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static_cdn')
-
-
-
-GOOGLE_API_KEY = "AIzaSyApaTFbmCFRXPZSNPRtaAizpjz6CWxKgcg"
-
-RECAPTCHA_KEY = "6Lf7t4kfAAAAAMqy3krbMad75_SdSB_3epLu3F-1"
-
-RECAPTCHA_SECRET_KEY = "6Lf7t4kfAAAAAFDsfjPREAMpqTA279nGdPw7OW80"
 
 
 # Default primary key field type
